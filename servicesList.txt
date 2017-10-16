@@ -1,0 +1,7 @@
+getNameByEmpId
+getCertificatesByEmpId
+getCertificatesByEmpName
+authenticateUser
+getCertificatesByYear
+registerNewUser
+addCertificateByEmpId
