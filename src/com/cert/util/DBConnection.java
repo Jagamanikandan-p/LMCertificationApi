@@ -24,8 +24,7 @@ public class DBConnection {
 		dbCollection = db.getCollection(collection);		
 	}
 	
-	public FindIterable<Document> searchCetificatesbyEmpId(String empId) {
-		Document query = new Document("EmployeeNumber", empId);
+	public FindIterable<Document> runQuery(Document query) {
 		return dbCollection.find(query);
 	}
 	
