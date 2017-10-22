@@ -16,6 +16,10 @@
     <param-name>com.sun.jersey.config.property.packages</param-name>
     <param-value>com.cert.service</param-value>
 </init-param>
+    <init-param>
+    <param-name>com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider</param-name>
+    <param-value>true</param-value>
+</init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>LMCertificationsApi</servlet-name>

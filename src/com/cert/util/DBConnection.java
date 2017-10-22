@@ -13,10 +13,12 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
 public class DBConnection {
-	MongoClient mongo = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));; 
+	
+	MongoClient mongo = new MongoClient(new MongoClientURI("mongodb://127.0.0.1:27017"));; 
 	MongoDatabase db = mongo.getDatabase("LMCertificationsDB");
 	MongoCollection<Document> dbCollection;
 	
@@ -24,11 +26,13 @@ public class DBConnection {
 		dbCollection = db.getCollection(collection);		
 	}
 	
-	public FindIterable<Document> runQuery(Document query) {
-		return dbCollection.find(query);
+	public MongoCursor<Document> runQuery(Document query) {
+	
+		return dbCollection.find(query).iterator();
 	}
 	
 	public void closeDBConnection() {
+		
 		mongo.close();
 	}
 }
