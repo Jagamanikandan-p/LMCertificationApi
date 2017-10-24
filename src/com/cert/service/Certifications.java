@@ -80,15 +80,15 @@ public class Certifications {
 	public String addNewCertificate(@PathParam("employeeId") String employeeId, @PathParam("employeeName") String employeeName, @PathParam("certificationId") String certificationId, @PathParam("certificationMode") String certificationMode, @PathParam("completedOn") String completedOn, @PathParam("score") String score, @PathParam("grade") String grade, @PathParam("status") String status){
 	
 		QueryDatabase queryDB = new QueryDatabase();
-		//queryDB.saveCertificate(employeeId, employeeName, certificationId, certificationMode, completedOn, score, grade, status);
-		System.out.println(employeeId);
-		System.out.println(employeeName);
-		System.out.println(certificationId);
-		System.out.println(certificationMode);
-		System.out.println(completedOn);
-		System.out.println(score);
-		System.out.println(grade);
-		System.out.println(status);
+		queryDB.saveCertificate(employeeId, employeeName, certificationId, certificationMode, completedOn, score, grade, status);
+		//System.out.println(employeeId);
+		//System.out.println(employeeName);
+		//System.out.println(certificationId);
+		//System.out.println(certificationMode);
+		//System.out.println(completedOn);
+		//System.out.println(score);
+		//System.out.println(grade);
+		//System.out.println(status);
 		
 	    return "Certificate Saved";
 	}
