@@ -1,4 +1,4 @@
-package com.cert.filter;
+package com.lmcertfication.filter;
 import java.io.IOException;
 
 import javax.servlet.FilterChain;
@@ -21,7 +21,7 @@ public class RESTApiOrgin implements javax.servlet.Filter
     {
         HttpServletResponse res = (HttpServletResponse) response;
         res.addHeader("Access-Control-Allow-Origin", "*");
-        res.addHeader("Access-Control-Allow-Methods", "GET, POST, DELETE");
+        res.addHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
         res.addHeader("Access-Control-Allow-Headers", "origin, content-type, accept, authorization");
         chain.doFilter(request, response);
     }

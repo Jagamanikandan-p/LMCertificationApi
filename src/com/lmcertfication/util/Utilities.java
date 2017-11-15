@@ -1,4 +1,4 @@
-package com.cert.util;
+package com.lmcertfication.util;
 
 public class Utilities {
 

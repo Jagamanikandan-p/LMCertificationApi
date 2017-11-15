@@ -1,4 +1,4 @@
-package com.cert.service;
+package com.lmcertfication.service;
 
 public class Certificate {
 	String employeeId;
